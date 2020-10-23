@@ -74,9 +74,7 @@ export default {
       })),
     });
 
-    await schema.validate(data, { 
-      abortEarly: false,
-    });
+    await schema.validate(data, { abortEarly: false });
 
     const orphanage = orphanagesRepository.create(data);
 
